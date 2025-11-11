@@ -1,3 +1,6 @@
+import { Origin } from "./Origin";
+import { Location } from "./Location";
+
 export interface Character {
   id: string;
   name: string;
@@ -6,6 +9,6 @@ export interface Character {
   type: string;
   gender: string;
   image: string;
-  origin: { name: string };
-  location: { name: string };
+  origin: Origin;
+  location: Location;
 }

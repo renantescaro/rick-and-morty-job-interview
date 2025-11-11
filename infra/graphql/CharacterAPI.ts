@@ -19,8 +19,20 @@ export class CharacterAPI implements CharacterRepository {
       variables: { page, name },
     });
 
+    const results = data.characters.results.map((c: any) => ({
+      id: c.id,
+      name: c.name,
+      status: c.status,
+      species: c.species,
+      type: c.type,
+      gender: c.gender,
+      image: c.image,
+      origin: { name: c.origin.name },
+      location: { name: c.location.name },
+    }));
+
     return {
-      results: data.characters.results,
+      results,
       total: data.characters.info.count,
     };
   }
@@ -30,13 +42,39 @@ export class CharacterAPI implements CharacterRepository {
       query: gql`
         query ($id: ID!) {
           character(id: $id) {
-            id name status species gender image origin { name } location { name } type
+            id name status species type gender image
+            origin {
+              name
+            }
+            location {
+              name
+              type
+              dimension
+            }
           }
         }
       `,
       variables: { id },
     });
 
-    return data.character;
+    const c = data.character;
+
+    return {
+      id: c.id,
+      name: c.name,
+      status: c.status,
+      species: c.species,
+      type: c.type,
+      gender: c.gender,
+      image: c.image,
+      origin: {
+        name: c.origin.name
+      },
+      location: {
+        name: c.location.name,
+        type: c.location?.type,
+        dimension: c.location?.dimension
+      },
+    };
   }
 }
