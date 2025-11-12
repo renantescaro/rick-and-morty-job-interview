@@ -18,26 +18,36 @@ export function Pagination({
   const totalPages = Math.ceil(total / (pageSize || 1));
 
   return (
-    <div className="flex justify-center mt-6 gap-3 items-center">
-      <button
-        disabled={page === 1}
-        onClick={onPrevPage}
-        className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-      >
-        Anterior
-      </button>
+    <div className="flex justify-center mt-6 gap-6 items-center">
+      {page > 1 && (
+        <button
+          onClick={onPrevPage}
+          className="px-4 py-2 rounded transition-transform transform hover:scale-150"
+        >
+          <img
+            src="/icons/portalgun_previous.png"
+            alt="Anterior"
+            className="inline w-10 h-10 transition-transform duration-300 hover:scale-150"
+          />
+        </button>
+      )}
 
-      <span className="text-sm text-gray-700">
+      <span className="text-lg text-gray-200 font-semibold">
         Página {page} de {totalPages || 1}
       </span>
 
-      <button
-        disabled={page >= totalPages}
-        onClick={onNextPage}
-        className="px-4 py-2 bg-gray-200 rounded disabled:opacity-50"
-      >
-        Próxima
-      </button>
+      {page < totalPages && (
+        <button
+          onClick={onNextPage}
+          className="px-4 py-2 rounded transition-transform transform hover:scale-150"
+        >
+          <img
+            src="/icons/portalgun_next.png"
+            alt="Próxima"
+            className="inline w-10 h-10 transition-transform duration-300 hover:scale-150"
+          />
+        </button>
+      )}
     </div>
   );
 }

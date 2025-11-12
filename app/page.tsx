@@ -26,7 +26,10 @@ export default function HomePage() {
 
   return (
     <main className="p-6">
-      <Filter onFilter={setFilter} />
+      <div className="flex justify-center mb-6">
+        <Filter onFilter={setFilter} />
+      </div>
+
       <CharacterList
         characters={characters}
         page={page}
