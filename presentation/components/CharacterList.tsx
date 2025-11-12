@@ -1,15 +1,9 @@
 "use client";
 
+import { Character } from "@/domain/entities/Character";
 import { CharacterCard } from "@/presentation/components/CharacterCard";
 import { Pagination } from "@/presentation/components/Pagination";
 
-interface Character {
-  id: string;
-  name: string;
-  image: string;
-  status: string;
-  species: string;
-}
 
 interface CharacterListProps {
   characters: Character[];
