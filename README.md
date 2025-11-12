@@ -1,36 +1,93 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧬 Rick and Morty App
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![GraphQL](https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?logo=vercel)
 
-First, run the development server:
+> 🌐 Projeto desenvolvido para entrevista técnica, utilizando **Next.js + GraphQL + Clean Architecture**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Demonstração
+
+🔗 **Acesse o projeto online:**  
+👉 [https://rick-and-morty-job-interview.vercel.app/](https://rick-and-morty-job-interview.vercel.app/)
+
+---
+
+## 🧱 Tecnologias Utilizadas
+
+| Tecnologia | Descrição |
+|-------------|------------|
+| ⚡ **Next.js 16** | Framework React moderno com SSR e otimizações automáticas |
+| ⚛️ **React** | Biblioteca para criação da interface |
+| 🧩 **GraphQL + Apollo Client** | Consumo de dados da API pública do Rick and Morty |
+| 💅 **Tailwind CSS** | Estilização responsiva e moderna |
+| 🧼 **Clean Architecture** | Separação de camadas: domain, infra e presentation |
+| 🔹 **TypeScript** | Tipagem estática para segurança e clareza de código |
+
+---
+
+## 🧭 Estrutura de Pastas
+
+```
+📦 src/
+ ┣ 📂 domain/                → Entidades e contratos
+ ┣ 📂 infra/
+ ┃ ┗ 📂 graphql/             → Apollo Client e serviços da API
+ ┣ 📂 presentation/
+ ┃ ┣ 📂 components/          → Componentes reutilizáveis (CharacterCard, Filter, etc)
+ ┃ ┣ 📂 pages/               → Páginas principais
+ ┃ ┗ 📂 styles/              → Estilos globais
+ ┗ 📜 app/
+    ┗ page.tsx               → Página inicial
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ⚙️ Como Executar Localmente
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 1️⃣ Clonar o repositório
+```bash
+git clone https://github.com/renantescaro/rick-and-morty-job-interview
+cd rick-and-morty-job-interview
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 2️⃣ Instalar dependências
+```bash
+npm install
+# ou
+yarn install
+```
 
-## Learn More
+### 3️⃣ Criar o arquivo `.env.local`
+```env
+NEXT_PUBLIC_GRAPHQL_URL=https://rickandmortyapi.com/graphql
+```
 
-To learn more about Next.js, take a look at the following resources:
+### 4️⃣ Rodar o projeto em modo desenvolvimento
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 5️⃣ Acessar
+Abra o navegador e entre em:  
+👉 **http://localhost:3000**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🧠 Funcionalidades
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+✅ Listagem de personagens  
+✅ Filtro por nome e status  
+✅ Layout responsivo
+✅ Consumo via GraphQL  
+✅ Padrão de camadas com Clean Architecture  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 👨‍💻 Autor
+
+**Renan Tescaro**
+🔗 [LinkedIn](https://www.linkedin.com/in/renan-tescaro/)  
+📧 renantescaro@yahoo.com.br  
