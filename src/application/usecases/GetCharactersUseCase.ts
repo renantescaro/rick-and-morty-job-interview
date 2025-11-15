@@ -1,4 +1,4 @@
-import { CharacterRepository } from "@/src/domain/repositories/CharacterRepository";
+import { CharacterRepository } from "@/domain/repositories/CharacterRepository";
 
 export class GetCharactersUseCase {
   constructor(private repo: CharacterRepository) {}
