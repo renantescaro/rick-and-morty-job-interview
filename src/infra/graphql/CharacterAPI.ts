@@ -1,7 +1,7 @@
 import { gql } from "@apollo/client";
 import { client } from "./client";
-import { CharacterRepository } from "@/domain/repositories/CharacterRepository";
-import { Character } from "@/domain/entities/Character";
+import { CharacterRepository } from "@/src/domain/repositories/CharacterRepository";
+import { Character } from "@/src/domain/entities/Character";
 
 interface CharactersResponse {
   characters: {

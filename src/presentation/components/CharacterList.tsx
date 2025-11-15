@@ -1,8 +1,8 @@
 "use client";
 
-import { Character } from "@/domain/entities/Character";
-import { CharacterCard } from "@/presentation/components/CharacterCard";
-import { Pagination } from "@/presentation/components/Pagination";
+import { CharacterCard } from "./CharacterCard";
+import { Character } from "src/domain/entities/Character";
+import { Pagination } from "./Pagination";
 
 
 interface CharacterListProps {
