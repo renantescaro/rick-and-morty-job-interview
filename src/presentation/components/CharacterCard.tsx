@@ -3,7 +3,7 @@ import { Character } from "@/domain/entities/Character";
 
 export function CharacterCard({ character }: { character: Character }) {
   return (
-    <Link href={`/character/${character.id}`}>
+    <Link href={`/character/${character.id}`} data-testid="character-card">
       <div
         className="
           bg-black border border-gray-700 p-3 rounded-xl
