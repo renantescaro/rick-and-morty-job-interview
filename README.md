@@ -38,9 +38,7 @@
  ┣ 📂 infra/
  ┃ ┗ 📂 graphql/             → Apollo Client e serviços da API
  ┣ 📂 presentation/
- ┃ ┣ 📂 components/          → Componentes reutilizáveis (CharacterCard, Filter, etc)
- ┃ ┣ 📂 pages/               → Páginas principais
- ┃ ┗ 📂 styles/              → Estilos globais
+ ┃ ┗ 📂 components/          → Componentes reutilizáveis (CharacterCard, Filter, etc)
  ┗ 📜 app/
     ┗ page.tsx               → Página inicial
 ```
