@@ -27,7 +27,7 @@ export default function HomePage() {
   return (
     <main className="p-6">
       <div className="flex justify-center mb-6">
-        <Filter onFilter={setFilter} />
+        <Filter onFilter={(name) => setFilter(name.toLowerCase())} />
       </div>
 
       <CharacterList

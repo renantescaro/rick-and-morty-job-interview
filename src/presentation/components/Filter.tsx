@@ -16,6 +16,7 @@ export function Filter({ onFilter }: { onFilter: (name: string) => void }) {
     >
       <input
         value={name}
+        data-testid="search-input"
         onChange={(e) => setName(e.target.value)}
         placeholder="Filtrar por nome..."
         className="border border-gray-400 p-3 rounded w-35 sm:w-80 text-lg 
@@ -24,6 +25,7 @@ export function Filter({ onFilter }: { onFilter: (name: string) => void }) {
                    focus:scale-130"
       />
       <button
+        data-testid="search-button"
         onClick={handleSearch}
         className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded 
                    text-lg font-semibold transition-transform transform 
