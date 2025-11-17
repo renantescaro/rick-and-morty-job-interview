@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest"
+    "test": "jest",
+    "e2e": "npx cypress run --browser chrome --headed"
   },
   "dependencies": {
     "@apollo/client": "^4.0.9",
