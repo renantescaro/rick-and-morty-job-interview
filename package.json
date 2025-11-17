@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "test": "jest"
+    "test": "jest",
+    "e2e": "npx cypress run --browser chrome --headed"
   },
   "dependencies": {
     "@apollo/client": "^4.0.9",
@@ -24,6 +25,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "cypress": "^15.6.0",
     "eslint": "^9",
     "eslint-config-clean-code": "^8.0.0",
     "eslint-config-next": "16.0.1",
